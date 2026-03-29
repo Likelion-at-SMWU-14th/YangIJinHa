@@ -1,0 +1,253 @@
+/* 기본 초기화 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Noto Sans KR", sans-serif;
+    background-color: #000;
+}
+
+/* 전체 바깥 영역 */
+.page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 36px 60px;
+    background-color: #000;
+}
+
+/* 메인 배경 박스 */
+.container {
+    width: 1160px;
+    min-height: 760px;
+    margin: 0 auto;
+    padding: 14px 26px 34px 26px;
+    border-radius: 22px;
+    background: linear-gradient(to bottom, #3a281d 0%, #2f2d2d 38%, #080808 100%);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+/* 상단 헤더 */
+.top-bar {
+    width: 100%;
+    height: 72px;
+    background-color: #ececec;
+    border-radius: 18px;
+    padding: 0 26px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 왼쪽 */
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.top-left h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f57a1f;
+}
+
+/* 오른쪽 */
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.link-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.link-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.top-right a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #111;
+}
+
+.top-right a:hover {
+    opacity: 0.75;
+}
+
+.divider-text {
+    font-size: 18px;
+    color: #555;
+}
+
+/* 본문 전체 */
+main {
+    width: 100%;
+    padding: 62px 72px 0 72px;
+}
+
+/* 소개 섹션 */
+.intro-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+/* 프로필 사진 */
+.profile-image-box {
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 202px;
+    height: 202px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    background-color: #fff;
+}
+
+/* 소개 텍스트 영역 */
+.intro-text-box {
+    flex: 1;
+    padding-top: 18px;
+}
+
+.intro-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 26px;
+}
+
+.label {
+    width: 120px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f57a1f;
+    line-height: 1.5;
+    flex-shrink: 0;
+}
+
+.value {
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+.description {
+    max-width: 760px;
+}
+
+.description p {
+    font-size: 22px;
+    line-height: 1.8;
+    color: #ffffff;
+    word-break: keep-all;
+}
+
+/* 중간 선 */
+.section-line {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.7);
+    margin: 36px 0 18px 0;
+}
+
+/* 프로젝트 섹션 */
+.projects-section h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #f57a1f;
+    margin-bottom: 20px;
+}
+
+/* 프로젝트 카드 리스트 */
+.project-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* 카드 하나 */
+.project-card {
+    width: 300px;
+    height: 295px;
+    background-color: #efefef;
+    border-radius: 20px;
+    padding: 26px 18px 18px 18px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* 카드 텍스트 */
+.project-text {
+    text-align: center;
+}
+
+.project-text h3 {
+    font-size: 21px;
+    color: #f57a1f;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.project-text p {
+    font-size: 13px;
+    color: #111;
+    line-height: 1.45;
+    word-break: keep-all;
+}
+
+/* 카드 이미지 */
+.project-image-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 1280px) {
+    .page {
+        padding: 24px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    main {
+        padding: 50px 40px 0 40px;
+    }
+
+    .project-list {
+        gap: 20px;
+    }
+
+    .project-card {
+        width: calc((100% - 40px) / 3);
+    }
+}
