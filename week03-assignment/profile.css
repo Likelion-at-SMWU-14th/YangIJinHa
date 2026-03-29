@@ -1,44 +1,38 @@
-/* 기본 초기화 */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, "Noto Sans KR", sans-serif;
-    background-color: #000;
+    body {
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(180deg, #362a21 0%, #0d0d0d 100%);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+    font-family: "Pretendard Variable";
+    font-size: 16px;
 }
 
-/* 전체 바깥 영역 */
-.page {
-    width: 100%;
-    min-height: 100vh;
-    padding: 36px 60px;
-    background-color: #000;
-}
 
 /* 메인 배경 박스 */
 .container {
-    width: 1160px;
+    width: 100%;
+    max-width: 1160px;
     min-height: 760px;
     margin: 0 auto;
     padding: 14px 26px 34px 26px;
-    border-radius: 22px;
-    background: linear-gradient(to bottom, #3a281d 0%, #2f2d2d 38%, #080808 100%);
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    border-radius: 1.125rem;
+    background: rgba(60, 60, 60, 0.3);
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 /* 상단 헤더 */
 .top-bar {
     width: 100%;
-    height: 72px;
+    min-height: 72px;
     background-color: #ececec;
     border-radius: 18px;
-    padding: 0 26px;
+    padding: 16px 26px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 /* 왼쪽 */
@@ -46,18 +40,22 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
+    min-width: 0;
 }
 
 .logo {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     object-fit: contain;
+    display: block;
+    flex-shrink: 0;
 }
 
 .top-left h1 {
     font-size: 22px;
     font-weight: 700;
     color: #f57a1f;
+    white-space: nowrap;
 }
 
 /* 오른쪽 */
@@ -65,6 +63,8 @@ body {
     display: flex;
     align-items: center;
     gap: 14px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .link-item {
@@ -74,9 +74,11 @@ body {
 }
 
 .link-icon {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
     object-fit: contain;
+    display: block;
+    flex-shrink: 0;
 }
 
 .top-right a {
@@ -87,11 +89,27 @@ body {
 
 .top-right a:hover {
     opacity: 0.75;
+    color:#f57a1f;
 }
 
 .divider-text {
     font-size: 18px;
     color: #555;
+}
+
+.exit-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+.exit-icon {
+    width: 17.5px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
 }
 
 /* 본문 전체 */
@@ -109,32 +127,37 @@ main {
 
 /* 프로필 사진 */
 .profile-image-box {
-    flex-shrink: 0;
-}
-
-.profile-image {
     width: 202px;
     height: 202px;
     border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #fff;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     display: block;
-    background-color: #fff;
 }
 
 /* 소개 텍스트 영역 */
 .intro-text-box {
     flex: 1;
     padding-top: 18px;
+    min-width: 0;
 }
 
 .intro-row {
     display: flex;
     align-items: flex-start;
     margin-bottom: 26px;
+    gap: 18px;
 }
 
 .label {
-    width: 120px;
+    width: 100px;
     font-size: 24px;
     font-weight: 700;
     color: #f57a1f;
@@ -143,17 +166,18 @@ main {
 }
 
 .value {
-    font-size: 22px;
+    font-size: 1.375rem;
     color: #ffffff;
     line-height: 1.5;
 }
 
 .description {
-    max-width: 760px;
+    flex: 1;
+    min-width: 0;
 }
 
 .description p {
-    font-size: 22px;
+    font-size: 1.375rem;
     line-height: 1.8;
     color: #ffffff;
     word-break: keep-all;
@@ -177,22 +201,21 @@ main {
 
 /* 프로젝트 카드 리스트 */
 .project-list {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
 /* 카드 하나 */
 .project-card {
-    width: 300px;
-    height: 295px;
     background-color: #efefef;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     padding: 26px 18px 18px 18px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    min-height: 295px;
 }
 
 /* 카드 텍스트 */
@@ -201,14 +224,14 @@ main {
 }
 
 .project-text h3 {
-    font-size: 21px;
+    font-size: 1.3125rem;
     color: #f57a1f;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
 .project-text p {
-    font-size: 13px;
+    font-size: 0.8125rem;
     color: #111;
     line-height: 1.45;
     word-break: keep-all;
@@ -217,6 +240,7 @@ main {
 /* 카드 이미지 */
 .project-image-box {
     width: 100%;
+    height: 150px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -224,30 +248,179 @@ main {
 }
 
 .project-image {
-    width: 100%;
-    max-height: 150px;
+    width: 92%;
+    height: 100%;
     object-fit: contain;
     display: block;
 }
 
-@media (max-width: 1280px) {
+/* =========================
+   반응형
+========================= */
+
+/* 1100px 이하 */
+@media (max-width: 1100px) {
     .page {
         padding: 24px;
-    }
-
-    .container {
-        width: 100%;
     }
 
     main {
         padding: 50px 40px 0 40px;
     }
 
+    .intro-section {
+        gap: 32px;
+    }
+
+    .label {
+        width: 90px;
+        font-size: 22px;
+    }
+
+    .value,
+    .description p {
+        font-size: 20px;
+    }
+
     .project-list {
-        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* 768px 이하 */
+@media (max-width: 768px) {
+    .page {
+        padding: 16px;
+    }
+
+    .container {
+        padding: 12px 16px 24px 16px;
+        border-radius: 18px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 1.625rem;
+    }
+
+    .top-right {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .exit-link {
+        margin-left: 0;
+    }
+
+    main {
+        padding: 36px 16px 0 16px;
+    }
+
+    .intro-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .profile-image-box {
+        width: 180px;
+        height: 180px;
+    }
+
+    .intro-text-box {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .intro-row {
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .label {
+        width: auto;
+        font-size: 1.5rem;
+    }
+
+    .value,
+    .description p {
+        font-size: 18px;
+    }
+
+    .description p br {
+        display: none;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr;
+        gap: 1.875rem;
     }
 
     .project-card {
-        width: calc((100% - 40px) / 3);
+        min-height: 280px;
+    }
+}
+
+/* 480px 이하 */
+@media (max-width: 480px) {
+    .top-left h1 {
+        font-size: 20px;
+    }
+
+    .logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .link-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    .top-right a {
+        font-size: 14px;
+    }
+
+    .divider-text {
+        display: none;
+    }
+
+    .exit-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .profile-image-box {
+        width: 150px;
+        height: 150px;
+    }
+
+    .label {
+        font-size: 19px;
+    }
+
+    .value,
+    .description p {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .projects-section h2 {
+        font-size: 22px;
+    }
+
+    .project-text h3 {
+        font-size: 19px;
+    }
+
+    .project-text p {
+        font-size: 12px;
+    }
+
+    .project-image-box {
+        height: 130px;
     }
 }
