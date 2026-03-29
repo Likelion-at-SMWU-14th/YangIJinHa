@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <!-- 상단 헤더 -->
+        <header class="top-bar">
+          <div class="top-left">
+            <img src="images/profile_logo.svg" alt="로고" class="logo" />
+            <h1>Profile</h1>
+          </div>
+
+          <div class="top-right">
+            <div class="link-item">
+                <img src="images/link-icon.svg" class="link-icon">
+                <a href="#">Linkedin</a>
+            </div>
+
+            <span class="divider-text">|</span>
+
+            <div class="link-item">
+                <img src="images/link-icon.svg" class="link-icon">
+                <a href="#">Notion</a>
+            </div>
+
+            <a href="login.html" class="exit-link" aria-label="나가기">
+                <img src="images/out.svg" alt="나가기 아이콘" class="exit-icon" />
+            </a>
+          </div>
+        </header>
+
+        <!-- 소개 섹션 -->
+        <main>
+          <section class="intro-section">
+            <div class="profile-image-box">
+              <img
+                src="images/profile.svg"
+                alt="프로필 사진"
+                class="profile-image"
+              />
+            </div>
+
+            <div class="intro-text-box">
+              <div class="intro-row">
+                <p class="label">아기사자</p>
+                <p class="value">양이진하</p>
+              </div>
+
+              <div class="intro-row intro-row-top">
+                <p class="label">소개글</p>
+                <div class="description">
+                    <p>사용자 관점에서 문제를 정의하고, 이를 서비스로 구현하는 기획자입니다.</p>
+                    <p>AI 기술을 활용한 서비스 기획에 관심이 있으며, 기획과 기술을 연결하는</p>
+                    <p>Product Manager가 되는 것이 목표입니다.</p>            
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 중간 구분선 -->
+          <hr class="section-line" />
+
+          <!-- 프로젝트 섹션 -->
+          <section class="projects-section">
+            <h2>Projects</h2>
+
+            <div class="project-list">
+              <article class="project-card">
+                <div class="project-text">
+                  <h3>Team Sketch</h3>
+                  <p>“팀플의 모든 것을 한곳에”</p>
+                  <p>- 대학생 팀플 관리 협업 서비스</p>
+                </div>
+                <div class="project-image-box">
+                  <img
+                    src="images/project1.svg"
+                    alt="Team Sketch 프로젝트 이미지"
+                    class="project-image"
+                  />
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-text">
+                  <h3>FeelSync</h3>
+                  <p>“감정을 이해할 수 있는 관계를 설계하다”</p>
+                  <p>- 연인의 관계의 지속을 위한 서비스</p>
+                </div>
+                <div class="project-image-box">
+                  <img
+                    src="images/project2.svg"
+                    alt="FeelSync 프로젝트 이미지"
+                    class="project-image"
+                  />
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-text">
+                  <h3>For A</h3>
+                  <p>“ADHD 환자의 복약 관리부터 감정까지”</p>
+                  <p>- ADHD 환자의 일상을 위한 서비스</p>
+                </div>
+                <div class="project-image-box">
+                  <img
+                    src="images/project3.svg"
+                    alt="For A 프로젝트 이미지"
+                    class="project-image"
+                  />
+                </div>
+              </article>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
