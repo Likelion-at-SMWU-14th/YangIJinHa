@@ -1,0 +1,122 @@
+{% load static %}
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <header class="top-bar">
+          <div class="top-left">
+            <img src="{% static 'images/profile_logo.svg' %}" alt="로고" class="logo" />
+            <h1>Profile</h1>
+          </div>
+          <div class="top-right">
+            <div class="link-item">
+              <img src="{% static 'images/link-icon.svg' %}" alt="링크 아이콘" class="link-icon" />
+              <a href="#">Linkedin</a>
+            </div>
+
+            <span class="divider-text">|</span>
+
+            <div class="link-item">
+              <img src="{% static 'images/link-icon.svg' %}" alt="링크 아이콘" class="link-icon" />
+              <a href="#">Notion</a>
+            </div>
+
+            <a href="{% url 'login' %}" class="exit-link" aria-label="나가기">
+              <svg width="35" height="35" viewBox="0 0 35 35" alt="나가기 아이콘" class="exit-icon"> 
+                <path d="M21.875 5.83484H7.29163V26.2515C7.29163 27.0251 7.59892 27.7669 8.1459 28.3139C8.69288 28.8609 9.43474 29.1682 10.2083 29.1682H21.875M23.3333 21.8765L27.7083 17.5015M27.7083 17.5015L23.3333 13.1265M27.7083 17.5015H13.125" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </header>
+
+        <main>
+          <section class="intro-section">
+            <div class="profile-image-box">
+              <img
+                src="{% static 'images/profile.svg' %}"
+                alt="프로필 사진"
+                class="profile-image"
+              />
+            </div>
+
+            <div class="intro-text-box">
+              <div class="intro-row">
+                <p class="label">아기사자</p>
+                <p class="value">{{ user.first_name }}</p>
+              </div>
+
+              <div class="intro-row intro-row-top">
+                <p class="label">소개글</p>
+                <div class="description">
+                  <p>사용자 관점에서 문제를 정의하고, 이를 서비스로 구현하는 기획자입니다.</p>
+                  <p>AI 기술을 활용한 서비스 기획에 관심이 있으며, 기획과 기술을 연결하는</p>
+                  <p>Product Manager가 되는 것이 목표입니다.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <hr class="section-line" />
+
+          <section class="projects-section">
+            <h2>Projects</h2>
+
+            <div class="project-list">
+              <article class="project-card">
+                <div class="project-text">
+                  <h3>Team Sketch</h3>
+                  <p>“팀플의 모든 것을 한곳에”</p>
+                  <p>- 대학생 팀플 관리 협업 서비스</p>
+                </div>
+                <div class="project-image-box">
+                  <img
+                    src="{% static 'images/project1.svg' %}"
+                    alt="Team Sketch 프로젝트 이미지"
+                    class="project-image"
+                  />
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-text">
+                  <h3>FeelSync</h3>
+                  <p>“감정을 이해할 수 있는 관계를 설계하다”</p>
+                  <p>- 연인의 관계의 지속을 위한 서비스</p>
+                </div>
+                <div class="project-image-box">
+                  <img
+                    src="{% static 'images/project2.svg' %}"
+                    alt="FeelSync 프로젝트 이미지"
+                    class="project-image"
+                  />
+                </div>
+              </article>
+
+              <article class="project-card">
+                <div class="project-text">
+                  <h3>For A</h3>
+                  <p>“ADHD 환자의 복약 관리부터 감정까지”</p>
+                  <p>- ADHD 환자의 일상을 위한 서비스</p>
+                </div>
+                <div class="project-image-box">
+                  <img
+                    src="{% static 'images/project3.svg' %}"
+                    alt="For A 프로젝트 이미지"
+                    class="project-image"
+                  />
+                </div>
+              </article>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
