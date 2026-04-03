@@ -42,7 +42,11 @@ header {
 .icon {
   width: 1.88213rem;
   height: 2.17888rem;
+  color: #fff;
+  text-decoration: none;
+  fill: none;
 }
+
 
 h2 {
   margin: 0;
