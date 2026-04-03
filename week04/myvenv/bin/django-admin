@@ -1,0 +1,8 @@
+#!/bin/sh
+'''exec' "/Users/jinha/Documents/문서 - 양이진하의 MacBook Air/2026-LikeLion-YangLeejinha/YangIJinHa/week04/myvenv/bin/python3.13" "$0" "$@"
+' '''
+import sys
+from django.core.management import execute_from_command_line
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(execute_from_command_line())
