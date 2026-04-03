@@ -1,0 +1,8 @@
+#!/bin/sh
+'''exec' "/Users/jinha/Documents/문서 - 양이진하의 MacBook Air/2026-LikeLion-YangLeejinha/YangIJinHa/week04/myvenv/bin/python3.13" "$0" "$@"
+' '''
+import sys
+from sqlparse.__main__ import main
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(main())
